@@ -6,13 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
 </head>
 <body>
 	<div class="container">
 		<div class="apd apd0">
 			<div class="left">
 				<div class="blackcover"></div>
-				<div class="cover"><div class="hinword">तरकारी</div><div class="hinmean">सब्ज़ी; शाक</div><div class="engword">Vegetable</div><div class="engmean">A plant or root used as food, especially in dishes</div></div>
+				<div class="cover"><div class="hinword"></div><div class="hinmean"></div><div class="engword"></div><div class="engmean"></div></div>
 			</div>
 			<div class="right">
 				<div class="char">
@@ -99,6 +100,7 @@
 			$(".apd0 .char").append("<span class='character c1' id='c'>"+x[i]+"</span>")
 		}
 		$(".apd0  .c1" ).draggable()
+
 		$(".apd0 .rect").droppable({
 			drop: function(event, ui) {
 				$(".apd0 .rect").append(($(ui.draggable).html()))
@@ -116,8 +118,9 @@
 		var spl = x;
 		function animation(){
 			$(".container").append("<div class='apd "+varname+"'><div class='left'><div class='blackcover'></div><div class='cover'><div class='hinword'></div><div class='hinmean'></div><div class='engword'></div><div class='engmean'></div></div></div><div class='right'><div class='char'></div><div class='arrow'><img src='arrows.png'></div><div class='answer'></div><div class='rect'></div></div></div>")
-
 			spl = nWord()
+			
+			
 			for( i=0; i<spl.length; i++){
 				$("."+varname+" .char").append("<span class='character c1' id='c'>"+spl[i]+"</span>")
 			}
