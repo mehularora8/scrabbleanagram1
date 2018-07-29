@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
 </head>
 <body>
 	<div class="container">
@@ -182,7 +181,23 @@
 				animation();	
 			}
 			else{
-				alert("not correct")
+				$("."+varname+" .rect").empty();
+				$("."+varname+" .arrow").css({"display":"none"})
+				$("."+varname+" .rect").html("<div class='trs'><img  src='wrong.png'></div>")
+				$("."+varname+" .rect").css({"width":"150px", "height":"150px"})
+				$("."+varname+" .rect .trs").css({"transform":"scale(2.5)"})
+				score++
+				$("."+varname+" .rect .trs").css({"transform":"scale(2)"})
+				qsNo++
+				$(".ns").empty()
+				$(".ns").html(score)
+				console.log(qsNo)
+				$(".engword").append("<b>English Translation: </b>"+words[initint][1])
+				$(".hinmean").append("<b> अर्थ: </b>"+words[initint][2])
+				$(".engmean").append("<b>English Meaning:</b> "+words[initint][3])
+				$(".hinword").append("<b> शब्द: </b>"+words[initint][0])
+				varname = "apd"+qsNo; 
+				endscreen();
 				if (inithigh<score) {
 					$(".hs").html(score)
 					localStorage.setItem('high', JSON.stringify(score));
