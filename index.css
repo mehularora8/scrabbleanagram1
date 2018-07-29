@@ -1,3 +1,7 @@
+@font-face {
+	font-family: 'aileron';
+	src: url('./aileron.otf' ) ;
+}
 body{
 	padding: 0;
 	margin:0;
@@ -93,19 +97,19 @@ body{
 /*.panel:hover > .button{
 	transform: scale(1.05);
 	filter: grayscale(0%);
-}*/
+	}*/
 
-.panel:hover > .blackcover{
-	background: rgba(0,0,0,0.40);
-}
+	.panel:hover > .blackcover{
+		background: rgba(0,0,0,0.40);
+	}
 
-.button{
-	color: white;
-	font-size: 45px;
-	position: absolute;
-	z-index: 50;
-	bottom: 70px;
-	letter-spacing: 2px;
+	.button{
+		color: white;
+		font-size: 45px;
+		position: absolute;
+		z-index: 50;
+		bottom: 70px;
+		letter-spacing: 2px;
 	/*border-radius: 15%/80%;
 	border: 1px solid white;
 	transition: all 0.7s ease;*/
@@ -125,12 +129,12 @@ a{
 }
 /*.button:hover{
 	background-color: #E84759;
-} */
+	} */
 
-.line{
-	width: 90px;
-	height: 2px;
-	background:#fff;
-	position: absolute;
-	margin-top: 2px;
-}
+	.line{
+		width: 90px;
+		height: 2px;
+		background:#fff;
+		position: absolute;
+		margin-top: 2px;
+	}
