@@ -84,8 +84,7 @@
 		var initText
 		function nWord(){
 			var rand = getRandomInt(25);	
-			var newWord = words[rand][0]
-			console.log(newWord)
+			var newWord = words[rand][0];
 			var arrStr = newWord;
 			var randomStr = arrStr.split('').sort(randomsort); 
 			v = randomStr
@@ -95,6 +94,7 @@
 		}
 		var initwid = 60
 		var x = nWord();
+		
 		for (i = 0; i < x.length; i++) { 
 			$(".apd0 .char").append("<span class='character c1' id='c'>"+x[i]+"</span>")
 		}
@@ -113,12 +113,15 @@
 		});
 
 		var varname = "apd"+qsNo; 
+		nimage =words[initint][1]+".jpg";
+		$(".apd0 .left").css("background-image", "url("+nimage+")")
 		var change = 0;
 		var spl = x;
 		function animation(){
 			$(".container").append("<div class='apd "+varname+"'><div class='left'><div class='blackcover'></div><div class='cover'><div class='hinword'></div><div class='hinmean'></div><div class='engword'></div><div class='engmean'></div></div></div><div class='right'><div class='char'></div><div class='arrow'><img src='arrows.png'></div><div class='answer'></div><div class='rect'></div></div></div>")
 			spl = nWord()
-			
+			nimage =words[initint][1]+".jpg";
+			$("."+varname+" .left").css("background-image", "url("+nimage+")")
 			
 			for( i=0; i<spl.length; i++){
 				$("."+varname+" .char").append("<span class='character c1' id='c'>"+spl[i]+"</span>")
@@ -132,7 +135,8 @@
 					$("."+varname+" .rect").empty();
 					$("."+varname+" .rect").append(tempText)
 					$($(ui.draggable)).remove()
-				}});
+				}
+			});
 			$("."+varname+".rect").css({"width":""})
 			setTimeout (function(){
 				change = change - 100

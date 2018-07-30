@@ -36,7 +36,6 @@ body{
 	justify-content: center;
 	color:white;
 	position: relative;
-	background: url("Welcome.jpg") no-repeat;
 	background-position: center center;
 	background-size: cover;	
 }
