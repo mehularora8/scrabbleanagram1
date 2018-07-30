@@ -29,7 +29,7 @@ body{
 
 .left{
  	height: 100vh;
-	width: 50vw;
+	width: 45vw;
 	font-size: 75px;
 	display: flex;
 	align-items: center;
@@ -37,12 +37,14 @@ body{
 	color:white;
 	position: relative;
 	background-position: center center;
-	background-size: cover;	
+	background-size: cover; /*can change to contain if need be*/
+	background-repeat: no-repeat;
+
 }
 
 .right{
 	height: 100vh;
-	width: 50vw;
+	width: 55vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
