@@ -90,8 +90,9 @@ body{
 }
 
 .footer{
-	height: 10vh;
-	background:#f7f7f7;
+	height: 7vh;
+	background:#424242;
 	text-align: center;
 	padding: 20px;
+	color: white;
 }
