@@ -1,5 +1,5 @@
 ::-webkit-scrollbar { 
-    display: none; 
+    display:none;
 
 }
 
@@ -144,7 +144,7 @@ body{
 
 .highscore{
 	position: fixed;
-	left: 51vw;
+	left: 47vw;
 	top: 20px;
 }
 
@@ -209,4 +209,5 @@ body{
 	position: fixed;
 	top: 10px;
 	left: 10px;
+	cursor: pointer;
 }
