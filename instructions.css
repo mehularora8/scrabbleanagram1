@@ -17,7 +17,7 @@ body{
 }
 .heading{
 	position: absolute;
-	margin-top: 50px;
+	margin-top: 35px;
 	width: 100vw;
 	font-size: 80px;
 	text-align: center;
@@ -62,7 +62,7 @@ body{
 .head{
 	position: relative;
 	top:10px;
-	left:37%;
+	left:35%;
 	font-size: 40px;
 	font-weight: bolder;
 }
@@ -75,7 +75,7 @@ body{
 }
 
 .right .head{
-	left: 25%;
+	left: 35%;
 }
 
 .team{
