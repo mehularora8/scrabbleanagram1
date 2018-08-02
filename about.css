@@ -79,7 +79,7 @@ body{
 }
 
 .team{
-	height: 60vh;
+	height: 85vh;
 	background: #f7f7f7;
 	width: 100vw;
 }
@@ -90,7 +90,7 @@ body{
 }
 
 .footer{
-	height: 7vh;
+	height: 5vh;
 	background:#424242;
 	text-align: center;
 	padding: 20px;
@@ -99,4 +99,42 @@ body{
 
 a{
 	text-decoration: none;
+}
+
+.members{
+	display: flex;
+	justify-content: center;
+	padding:75px;
+}
+
+.pic{
+	border-radius: 50%;
+	width: 370px;
+	height: 370px;
+	margin: 0px 50px;
+}
+
+#raghav{
+	background: url("raghav.jpg");
+	background-size: contain;
+	background-position: center center;
+}
+
+#mehul{
+	background: url("mehul.jpg") no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
+.mem{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 20px;
+	padding: 10px;
+}
+
+.mem p{
+	text-align: center;
+	font-size: 25px;
 }
