@@ -197,11 +197,9 @@
 				qsNo++
 				$(".ns").empty()
 				$(".ns").html(score)
-				console.log(qsNo)
-				$(".engword").append("<b>English Translation: </b>"+words[initint][1])
-				$(".hinmean").append("<b> अर्थ: </b>"+words[initint][2])
-				$(".engmean").append("<b>English Meaning:</b> "+words[initint][3])
-				$(".hinword").append("<b> शब्द: </b>"+words[initint][0])
+				$(".cover").append("<div class='hinword comm'><span class='ani'>"+words[initint][0]+"</span></div><div class='engword comm'><span class='ani'>"+words[initint][1]+"</span></div><div class='hinmean comm'><span class='ani'> "+words[initint][2]+"</span></div><div class='engmean comm'><span class='ani'>"+words[initint][3]+"</span></div>")
+
+				$(".ani").addClass("animated")
 				varname = "apd"+qsNo; 
 				endscreen();
 				if (inithigh<score) {
