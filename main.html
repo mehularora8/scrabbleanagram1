@@ -123,7 +123,7 @@
 		var change = 0;
 		var spl = x;
 		function animation(){
-			$(".container").append("<div class='apd "+varname+"'><div class='left'><div class='blackcover'></div><div class='cover'><div class='hinword'></div><div class='hinmean'></div><div class='engword'></div><div class='engmean'></div></div></div><div class='right'><div class='char'></div><div class='arrow'><img src='arrows.png'></div><div class='answer'></div><div class='rect'></div></div></div>")
+			$(".container").append("<div class='apd "+varname+"'><div class='left'><div class='blackcover'></div><div class='cover'></div></div><div class='right'><div class='char'></div><div class='arrow'><img src='arrows.png'></div><div class='answer'></div><div class='rect'></div></div></div>")
 			spl = nWord()
 			nimage =words[initint][1]+".jpg";
 			$("."+varname+" .left").css("background-image", "url("+nimage+")")
@@ -136,7 +136,7 @@
 				drop: function(event, ui) {
 					$("."+varname+" .rect").append(($(ui.draggable).html()))
 					var tempText = $("."+varname+" .rect").html();
-					$("."+varname+" .rect").css({"width":"+=12px"})	
+					$("."+varname+" .rect").css({"width":"+=13px"})	
 					$("."+varname+" .rect").empty();
 					$("."+varname+" .rect").append(tempText)
 					$($(ui.draggable)).remove()
@@ -155,10 +155,11 @@
 
 		function endscreen(){
 			varname = "apd"+qsNo; 
-			$(".container").append("<div class='apd "+varname+"'><div class='endleft'>Thank you for playing!</div><div class='endright' style='color:#E84356;'>खेलने के लिए धन्यवाद!</div></div>")
+			$(".container").append("<div class='apd "+varname+"'><div class='end'><div class='endcover'></><div class='endin'>Thank you for playing!<br>खेलने के लिए धन्यवाद!<br><span class='escore'>Your Score: "+score+"</span><span class='endbutton'>Play Again</div></div>")
 
 			/*$(".rect").css({"width":""})*/
 			setTimeout (function(){
+				$(".actions").hide();
 				change = change - 100
 				console.log(change)
 				changetext = change+"vw"
@@ -224,18 +225,15 @@
 				$(".hs").html(score)
 				localStorage.setItem('high', JSON.stringify(score));
 			}
-			$(".engword").append("<b>English Translation: </b>"+words[initint][1])
-			$(".hinmean").append("<b> अर्थ: </b>"+words[initint][2])
-			$(".engmean").append("<b>English Meaning:</b> "+words[initint][3])
-			$(".hinword").append("<b> शब्द: </b>"+words[initint][0])
+			$(".cover").append("<div class='hinword comm'><span class='ani'>"+words[initint][0]+"</span></div><div class='engword comm'><span class='ani'>"+words[initint][1]+"</span></div><div class='hinmean comm'><span class='ani'> "+words[initint][2]+"</span></div><div class='engmean comm'><span class='ani'>"+words[initint][3]+"</span></div>")
+			$(".ani").addClass("animated")
 			endscreen()
-			$(".actions").hide()
 		})
 
 		$(".reset").click(function () {
 			$("."+varname+" .rect").empty();
 			$("."+varname+" .char").empty();
-			$("."+varname+" .rect").css({"width":"60px"})
+			$("."+varname+" .rect").css({"width":"70px"})
 			initwid  = 60;
 			for( i=0; i<spl.length; i++){
 				$("."+varname+" .char").append("<span class='character c1' id='c'>"+spl[i]+"</span>")

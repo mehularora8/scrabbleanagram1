@@ -29,7 +29,7 @@ body{
 
 .left{
 	height: 100vh;
-	width: 45vw;
+	width: 50vw;
 	font-size: 75px;
 	display: flex;
 	align-items: center;
@@ -44,7 +44,7 @@ body{
 
 .right{
 	height: 100vh;
-	width: 55vw;
+	width: 50vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -144,7 +144,7 @@ body{
 
 .highscore{
 	position: fixed;
-	left: 47vw;
+	left: 51vw;
 	top: 20px;
 }
 
@@ -258,7 +258,7 @@ body{
 	letter-spacing: 3px;
 	margin:0 100px;
 	text-align: center;
-	height: 45px;
+	height: 50px;
 }
 
 .hinmean{
@@ -283,4 +283,54 @@ body{
 @keyframes example {
 	0% {top: 60px;}
 	100% {top: 0px;}
+}
+
+.endin{
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 60px;
+	color: #FBFEF9;
+	margin-top:-30px; 
+}
+
+.end{
+	width: 100vw;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url("thank.jpg");
+	background-repeat: none;
+	background-size: cover;
+}
+
+.endcover{
+	width: 100%;
+	height: 100%;
+	background:rgba(0, 0, 0, 0.9); 
+}
+
+.escore{
+	font-size: 35px;
+	margin-top: 50px;
+}
+
+.endbutton{
+	font-size: 20px;
+	margin-top: 30px;
+	padding: 10px 25px;
+	border: 2px solid #FBFEF9;
+	border-radius: 200px;
+	transition: all 0.5s ease;
+	cursor:pointer;
+}
+
+.endbutton:hover{
+	background: #FBFEF9;
+	color: #000;
 }
