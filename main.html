@@ -155,7 +155,7 @@
 
 		function endscreen(){
 			varname = "apd"+qsNo; 
-			$(".container").append("<div class='apd "+varname+"'><div class='end'><div class='endcover'></><div class='endin'>Thank you for playing!<br>खेलने के लिए धन्यवाद!<br><span class='escore'>Your Score: "+score+"</span><span class='endbutton'>Play Again</div></div>")
+			$(".container").append("<div class='apd "+varname+"'><div class='end'><div class='endcover'></><div class='endin'>Thank you for playing!<br>खेलने के लिए धन्यवाद!<br><span class='escore'>Your Score: "+score+"</span><span class='endbutton' id='endbutton'>Play Again</div></div>")
 
 			/*$(".rect").css({"width":""})*/
 			setTimeout (function(){
@@ -166,6 +166,9 @@
 				$(".container").css({"left":changetext})
 
 			}, 4000)
+		        $("#endbutton").click(function(){
+				location.reload();
+			});
 
 		}
 		$(".submit").click(function () {
