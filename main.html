@@ -7,7 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
-<body>
+<body alink="white" vlink="white" link="white">
 	<div class="container">
 		<div class="apd apd0">
 			<div class="left">
@@ -155,7 +155,7 @@
 
 		function endscreen(){
 			varname = "apd"+qsNo; 
-			$(".container").append("<div class='apd "+varname+"'><div class='end'><div class='endcover'></><div class='endin'>Thank you for playing!<br>खेलने के लिए धन्यवाद!<br><span class='escore'>Your Score: "+score+"</span><span class='endbutton'>Play Again</div></div>")
+			$(".container").append("<div class='apd "+varname+"'><div class='end'><div class='endcover'></><div class='endin'>Thank you for playing!<br>खेलने के लिए धन्यवाद!<br><span class='escore'>Your Score: "+score+"</span><a href='main.html' style='text-decoration:none;'><span class='endbutton'>Play Again</span></a></div></div>")
 
 			/*$(".rect").css({"width":""})*/
 			setTimeout (function(){
