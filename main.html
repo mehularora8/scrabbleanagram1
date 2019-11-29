@@ -22,7 +22,7 @@
 			<div class="right">
 				<div class="char">
 				</div>
-				<div class="arrow"><img src="arrows.png"></div>
+				<div class="arrow"><img src="images/arrows.png"></div>
 
 				<div class="answer">
 				</div>
@@ -42,6 +42,8 @@
 		<div class="hin">En |  ही</div>
 	</div>
 	<script type="text/javascript">
+
+		var toggle = 0;
 
 		var words=[
 		["तरकारी","Vegetable","सब्ज़ी; शाक", "A plant or root used as food, especially in dishes."],
@@ -118,14 +120,14 @@
 		});
 
 		var varname = "apd"+qsNo; 
-		nimage =words[initint][1]+".jpg";
+		nimage = "images/" + words[initint][1]+".jpg";
 		$(".apd0 .left").css("background-image", "url("+nimage+")")
 		var change = 0;
 		var spl = x;
 		function animation(){
-			$(".container").append("<div class='apd "+varname+"'><div class='left'><div class='blackcover'></div><div class='cover'></div></div><div class='right'><div class='char'></div><div class='arrow'><img src='arrows.png'></div><div class='answer'></div><div class='rect'></div></div></div>")
+			$(".container").append("<div class='apd "+varname+"'><div class='left'><div class='blackcover'></div><div class='cover'></div></div><div class='right'><div class='char'></div><div class='arrow'><img src='images/arrows.png'></div><div class='answer'></div><div class='rect'></div></div></div>")
 			spl = nWord()
-			nimage =words[initint][1]+".jpg";
+			nimage = "images/" + words[initint][1]+".jpg";
 			$("."+varname+" .left").css("background-image", "url("+nimage+")")
 			
 			for( i=0; i<spl.length; i++){
@@ -174,7 +176,7 @@
 			if (complete==initText) {
 				$("."+varname+" .rect").empty();
 				$("."+varname+" .arrow").css({"display":"none"})
-				$("."+varname+" .rect").html("<div class='trs'><img  src='correct.png'></div>")
+				$("."+varname+" .rect").html("<div class='trs'><img  src='images/correct.png'></div>")
 				$("."+varname+" .rect").css({"width":"150px", "height":"150px"})
 				$("."+varname+" .rect .trs").css({"transform":"scale(2.5)"})
 				score++
@@ -191,7 +193,7 @@
 			else{
 				$("."+varname+" .rect").empty();
 				$("."+varname+" .arrow").css({"display":"none"})
-				$("."+varname+" .rect").html("<div class='trs'><img  src='wrong.png'></div>")
+				$("."+varname+" .rect").html("<div class='trs'><img  src='images/wrong.png'></div>")
 				$("."+varname+" .rect").css({"width":"150px", "height":"150px"})
 				$("."+varname+" .rect .trs").css({"transform":"scale(2.5)"})
 				$("."+varname+" .rect .trs").css({"transform":"scale(2)"})
@@ -211,14 +213,20 @@
 		})
 
 		$(".hin").click(function(){
-			$(".button span").css({"top":"-30px"})
+			toggle++;
+			if(toggle %2 == 1){
+				$(".button span").css({"top":"-30px"});
+			} else {
+				$(".button span").css({"top":"0px"});
+			}
+
 		})
 
 		$(".reveal").click(function(){
 			$("."+varname+" .char").empty();
 			$("."+varname+" .char").css({"width":"60px"});
 			$("."+varname+" .arrow").css({"display":"none"})
-			$("."+varname+" .rect").html("<div class='trs'><img  src='wrong.png'></div>")
+			$("."+varname+" .rect").html("<div class='trs'><img  src='images/wrong.png'></div>")
 			$("."+varname+" .rect").css({"width":"150px", "height":"150px"})
 			$("."+varname+" .rect .trs").css({"transform":"scale(2.5)"})
 			if (inithigh<score) {

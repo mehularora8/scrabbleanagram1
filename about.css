@@ -1,7 +1,12 @@
+@font-face {
+	font-family: 'myriad';
+	src: url("Fonts/myriad.otf") ;
+}
+
 body{
 	padding: 0;
 	margin: 0;
-	font-family: Alegreya Sans SC,sans-serif;
+	font-family: 'myriad', sans-serif;
 	overflow: scroll;
 	overflow-x: hidden;
 	/*background: url("left.jpg") no-repeat;
@@ -55,7 +60,7 @@ body{
 	height: 100vh;
 	width: 100vw;
 	position: relative;
-	background: url("left.gif") no-repeat;
+	background: url("images/left.gif") no-repeat;
 	background-size: cover;
 }
 
@@ -91,6 +96,7 @@ body{
 
 .footer{
 	height: 5vh;
+	line-height: 5vh;
 	background:#424242;
 	text-align: center;
 	padding: 20px;
@@ -115,13 +121,13 @@ a{
 }
 
 #raghav{
-	background: url("raghav.jpg");
+	background: url("images/raghav.jpg");
 	background-size: contain;
 	background-position: center center;
 }
 
 #mehul{
-	background: url("mehul.gif") no-repeat;
+	background: url("images/mehul.gif") no-repeat;
 	background-size: contain;
 	background-position: center center;
 }

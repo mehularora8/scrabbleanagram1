@@ -1,14 +1,22 @@
 ::-webkit-scrollbar { 
 	display:none;
-
 }
+
+html{
+	overflow-y: hidden;
+}
+
+@font-face {
+	font-family: 'myriad';
+	src: url("Fonts/myriad.otf") ;
+}
+
 
 body{
 	margin: 0;
-	font-family: Product Sans, sans-serif;
+	font-family: 'myriad', sans-serif;
 	font-size: 20px;
 	overflow-y: hidden;
-
 }
 
 .container{
@@ -304,7 +312,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: url("thank.jpg");
+	background: url("images/thank.jpg");
 	background-repeat: none;
 	background-size: cover;
 }
